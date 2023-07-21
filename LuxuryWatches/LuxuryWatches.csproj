@@ -821,6 +821,8 @@
     <Content Include="assets\lib\validVal\serverside-validations\validations.php" />
     <Content Include="assets\lib\validVal\validVal.jquery.json" />
     <Content Include="Admin\Admin.Master" />
+    <Content Include="images\bgwatches.jpg" />
+    <Content Include="images\gioi-thieu-luxury.jpg" />
     <Content Include="Pages\Account\Customer.aspx" />
     <Content Include="Pages\Account\Logoff.ashx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

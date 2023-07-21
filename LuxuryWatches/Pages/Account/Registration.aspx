@@ -9,15 +9,21 @@
      <style type="text/css">
          .Btnlg {
              width: 141px;
+             margin-top: 28px;
+         }
+         .Btnlg:hover{
+             text-decoration: underline;
+             text-decoration-color: #551A8B;
          }
      </style>
 </head>
-<body>
+<body >
     <form id="form1" runat="server">
-        <section>
-            
-            <div class="box">
+    
+        <section >
+           
                 <div class="container">
+                   
                     <div class="form">
                         <h2>Đăng Ký</h2>
                         <div class="inputbox">
@@ -44,15 +50,16 @@
                         <div class="Btnsubmit">
                   <asp:Button href="/" ID="btnRegister2" type="submit" runat="server" ValidationGroup="registerForm" Text="Đăng Ký" OnClick="btnDK_Click" />
 
-    </div>
+                         </div>
                         <div class="Btnlg">
                             <a style="text-decoration: none" href="/dang-nhap">Đăng Nhập</a>
                         </div>
                     </div>
                 </div>
-            </div>
+           
            
         </section>
     </form>
+
 </body>
 </html>

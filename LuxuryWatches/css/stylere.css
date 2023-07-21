@@ -4,12 +4,14 @@
     box-sizing:border-box;
     font-family:'poppins' ,sans-serif;
 }
-section {
+    section {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-}
+    background-image: url('../images/bgwatches.jpg');
+   
+    }
   
   
     .box{
@@ -20,13 +22,13 @@ section {
 
     .container {
         position: relative;
-        width: 455px;
+        width: 680px;
         min-height: 455px;
         border-radius: 5px;
         justify-content: center;
         align-items: center;
         box-shadow: 0 25px 45px rgba(0,0,0,0.1);
-        
+  
 }
 
 .form {
@@ -34,8 +36,7 @@ section {
     /*width: 100px;*/
     height: 100px;
     padding: 40px;
-    top: 22px;
-    left: 0px;
+  
 }
  
    .form h2 {
@@ -46,9 +47,7 @@ section {
        letter-spacing: 1px;
        margin-bottom: 40px;
     
-    left: 129px;
-    width: 129px;
-    top: 12px;
+    
 }
    
    .style {
@@ -64,6 +63,7 @@ section {
    .Btnsubmit {
     display: flex;
     justify-content: center;
+    margin-top: 35px;
     }
 
     .Btnsubmit input[type="submit"] {
@@ -85,5 +85,6 @@ section {
         cursor: pointer;
         background: black;
     }
+ 
 
-   
+
