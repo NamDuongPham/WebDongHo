@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LuxuryWatchesModelStoreContainer" CdmEntityContainer="LuxuryWatchesEntities">
+    <EntitySetMapping Name="hopThus">
+      <EntityTypeMapping TypeName="LuxuryWatchesModel.hopThu">
+        <MappingFragment StoreEntitySet="hopThu">
+          <ScalarProperty Name="ghiChu" ColumnName="ghiChu" />
+          <ScalarProperty Name="tkDuyet" ColumnName="tkDuyet" />
+          <ScalarProperty Name="daDuyet" ColumnName="daDuyet" />
+          <ScalarProperty Name="ngayGui" ColumnName="ngayGui" />
+          <ScalarProperty Name="noiDung" ColumnName="noiDung" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="sdt" ColumnName="sdt" />
+          <ScalarProperty Name="hoTen" ColumnName="hoTen" />
+          <ScalarProperty Name="hopThuID" ColumnName="hopThuID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="baiViets">
+      <EntityTypeMapping TypeName="LuxuryWatchesModel.baiViet">
+        <MappingFragment StoreEntitySet="baiViet">
+          <ScalarProperty Name="biDanh" ColumnName="biDanh" />
+          <ScalarProperty Name="soLanDoc" ColumnName="soLanDoc" />
+          <ScalarProperty Name="daDuyet" ColumnName="daDuyet" />
+          <ScalarProperty Name="noiDungBV" ColumnName="noiDungBV" />
+          <ScalarProperty Name="hinhDD" ColumnName="hinhDD" />
+          <ScalarProperty Name="ndTomTat" ColumnName="ndTomTat" />
+          <ScalarProperty Name="tkThanhVien" ColumnName="tkThanhVien" />
+          <ScalarProperty Name="ngayDang" ColumnName="ngayDang" />
+          <ScalarProperty Name="tenBV" ColumnName="tenBV" />
+          <ScalarProperty Name="maBV" ColumnName="maBV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="taiKhoans">
+      <EntityTypeMapping TypeName="LuxuryWatchesModel.taiKhoan">
+        <MappingFragment StoreEntitySet="taiKhoan">
+          <ScalarProperty Name="Quyen" ColumnName="Quyen" />
+          <ScalarProperty Name="ghiChu" ColumnName="ghiChu" />
+          <ScalarProperty Name="duocSD" ColumnName="duocSD" />
+          <ScalarProperty Name="dcLienLac" ColumnName="dcLienLac" />
+          <ScalarProperty Name="eMail" ColumnName="eMail" />
+          <ScalarProperty Name="soDT" ColumnName="soDT" />
+          <ScalarProperty Name="noiSinh" ColumnName="noiSinh" />
+          <ScalarProperty Name="ngaySinh" ColumnName="ngaySinh" />
+          <ScalarProperty Name="hinhAnh" ColumnName="hinhAnh" />
+          <ScalarProperty Name="gioiTinh" ColumnName="gioiTinh" />
+          <ScalarProperty Name="tenTV" ColumnName="tenTV" />
+          <ScalarProperty Name="hoTV" ColumnName="hoTV" />
+          <ScalarProperty Name="ngayCap" ColumnName="ngayCap" />
+          <ScalarProperty Name="matKhau" ColumnName="matKhau" />
+          <ScalarProperty Name="tkThanhVien" ColumnName="tkThanhVien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sanPhams">
+      <EntityTypeMapping TypeName="LuxuryWatchesModel.sanPham">
+        <MappingFragment StoreEntitySet="sanPham">
+          <ScalarProperty Name="ngayDangSP" ColumnName="ngayDangSP" />
+          <ScalarProperty Name="soLanGD" ColumnName="soLanGD" />
+          <ScalarProperty Name="soLanQT" ColumnName="soLanQT" />
+          <ScalarProperty Name="danhGia" ColumnName="danhGia" />
+          <ScalarProperty Name="kichCo" ColumnName="kichCo" />
+          <ScalarProperty Name="mauSac" ColumnName="mauSac" />
+          <ScalarProperty Name="ndSanPham" ColumnName="ndSanPham" />
+          <ScalarProperty Name="soHinhKem" ColumnName="soHinhKem" />
+          <ScalarProperty Name="hinhDaiDien" ColumnName="hinhDaiDien" />
+          <ScalarProperty Name="biDanh" ColumnName="biDanh" />
+          <ScalarProperty Name="soLuong" ColumnName="soLuong" />
+          <ScalarProperty Name="daGiamGia" ColumnName="daGiamGia" />
+          <ScalarProperty Name="giaBan" ColumnName="giaBan" />
+          <ScalarProperty Name="tkThanhVien" ColumnName="tkThanhVien" />
+          <ScalarProperty Name="ndTomTat" ColumnName="ndTomTat" />
+          <ScalarProperty Name="tenSP" ColumnName="tenSP" />
+          <ScalarProperty Name="maHangSX" ColumnName="maHangSX" />
+          <ScalarProperty Name="maLoai" ColumnName="maLoai" />
+          <ScalarProperty Name="maSP" ColumnName="maSP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HangSanXuats">
+      <EntityTypeMapping TypeName="LuxuryWatchesModel.HangSanXuat">
+        <MappingFragment StoreEntitySet="HangSanXuat">
+          <ScalarProperty Name="tenHangSX" ColumnName="tenHangSX" />
+          <ScalarProperty Name="maHangSX" ColumnName="maHangSX" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="loaiSPs">
+      <EntityTypeMapping TypeName="LuxuryWatchesModel.loaiSP">
+        <MappingFragment StoreEntitySet="loaiSP">
+          <ScalarProperty Name="biDanh" ColumnName="biDanh" />
+          <ScalarProperty Name="tenLoai" ColumnName="tenLoai" />
+          <ScalarProperty Name="maLoai" ColumnName="maLoai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="LuxuryWatchesModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="donHangs">
+      <EntityTypeMapping TypeName="LuxuryWatchesModel.donHang">
+        <MappingFragment StoreEntitySet="donHang">
+          <ScalarProperty Name="ghiChu" ColumnName="ghiChu" />
+          <ScalarProperty Name="tdGiaoHang" ColumnName="tdGiaoHang" />
+          <ScalarProperty Name="daGiaoHang" ColumnName="daGiaoHang" />
+          <ScalarProperty Name="tdDatHang" ColumnName="tdDatHang" />
+          <ScalarProperty Name="tongThanhTien" ColumnName="tongThanhTien" />
+          <ScalarProperty Name="tongSoLuong" ColumnName="tongSoLuong" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="diaChi" ColumnName="diaChi" />
+          <ScalarProperty Name="soDT" ColumnName="soDT" />
+          <ScalarProperty Name="tenKH" ColumnName="tenKH" />
+          <ScalarProperty Name="maDH" ColumnName="maDH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chiTietDHs">
+      <EntityTypeMapping TypeName="LuxuryWatchesModel.chiTietDH">
+        <MappingFragment StoreEntitySet="chiTietDH">
+          <ScalarProperty Name="giaBan" ColumnName="giaBan" />
+          <ScalarProperty Name="soLuong" ColumnName="soLuong" />
+          <ScalarProperty Name="MauSac" ColumnName="MauSac" />
+          <ScalarProperty Name="KichCo" ColumnName="KichCo" />
+          <ScalarProperty Name="maSP" ColumnName="maSP" />
+          <ScalarProperty Name="maDH" ColumnName="maDH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="LuxuryWatchesModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="LuxuryWatchesModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="LuxuryWatchesModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="LuxuryWatchesModel.Store.sp_helpdiagramdefinition" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="LuxuryWatchesModel.Store.sp_helpdiagrams" />
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="LuxuryWatchesModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="LuxuryWatchesModel.Store.sp_upgraddiagrams" />
+    <EntitySetMapping Name="khachHangs">
+      <EntityTypeMapping TypeName="LuxuryWatchesModel.khachHang">
+        <MappingFragment StoreEntitySet="khachHang">
+          <ScalarProperty Name="matKhau" ColumnName="matKhau" />
+          <ScalarProperty Name="soDT" ColumnName="soDT" />
+          <ScalarProperty Name="eMail" ColumnName="eMail" />
+          <ScalarProperty Name="tkThanhVien" ColumnName="tkThanhVien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

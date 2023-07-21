@@ -7,13 +7,17 @@
      <link rel="stylesheet" href="/css/stylere.css"/>
     <title></title>
      <style type="text/css">
-         .Btnlg {
+         .Btnlg a {
              width: 141px;
              margin-top: 28px;
+             color: #3ec5a1;
+            
          }
          .Btnlg:hover{
              text-decoration: underline;
-             text-decoration-color: #551A8B;
+             text-decoration-color: #d0d0d0;
+            
+             
          }
      </style>
 </head>
@@ -52,7 +56,7 @@
 
                          </div>
                         <div class="Btnlg">
-                            <a style="text-decoration: none" href="/dang-nhap">Đăng Nhập</a>
+                            <a style="text-decoration: none; " href="/dang-nhap">Đăng Nhập</a>
                         </div>
                     </div>
                 </div>

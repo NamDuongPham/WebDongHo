@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LuxuryWatchesModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="LuxuryWatchesEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+    <EntitySet Name="hopThus" EntityType="LuxuryWatchesModel.hopThu" />
+    <EntitySet Name="baiViets" EntityType="LuxuryWatchesModel.baiViet" />
+    <EntitySet Name="taiKhoans" EntityType="LuxuryWatchesModel.taiKhoan" />
+    <AssociationSet Name="FK__baiViet__tkThanh__1BFD2C07" Association="LuxuryWatchesModel.FK__baiViet__tkThanh__1BFD2C07">
+      <End Role="taiKhoan" EntitySet="taiKhoans" />
+      <End Role="baiViet" EntitySet="baiViets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_hopThu_taiKhoan" Association="LuxuryWatchesModel.FK_hopThu_taiKhoan">
+      <End Role="taiKhoan" EntitySet="taiKhoans" />
+      <End Role="hopThu" EntitySet="hopThus" />
+    </AssociationSet>
+    <EntitySet Name="sanPhams" EntityType="LuxuryWatchesModel.sanPham" />
+    <AssociationSet Name="FK__sanPham__tkThanh__29572725" Association="LuxuryWatchesModel.FK__sanPham__tkThanh__29572725">
+      <End Role="taiKhoan" EntitySet="taiKhoans" />
+      <End Role="sanPham" EntitySet="sanPhams" />
+    </AssociationSet>
+    <EntitySet Name="HangSanXuats" EntityType="LuxuryWatchesModel.HangSanXuat" />
+    <EntitySet Name="loaiSPs" EntityType="LuxuryWatchesModel.loaiSP" />
+    <EntitySet Name="sysdiagrams" EntityType="LuxuryWatchesModel.sysdiagram" />
+    <AssociationSet Name="FK_sanPham_HangSanXuat" Association="LuxuryWatchesModel.FK_sanPham_HangSanXuat">
+      <End Role="HangSanXuat" EntitySet="HangSanXuats" />
+      <End Role="sanPham" EntitySet="sanPhams" />
+    </AssociationSet>
+    <AssociationSet Name="FK__sanPham__maLoai__267ABA7A" Association="LuxuryWatchesModel.FK__sanPham__maLoai__267ABA7A">
+      <End Role="loaiSP" EntitySet="loaiSPs" />
+      <End Role="sanPham" EntitySet="sanPhams" />
+    </AssociationSet>
+    <EntitySet Name="donHangs" EntityType="LuxuryWatchesModel.donHang" />
+    <EntitySet Name="chiTietDHs" EntityType="LuxuryWatchesModel.chiTietDH" />
+    <AssociationSet Name="FK__chiTietDH__maDH__3E52440B" Association="LuxuryWatchesModel.FK__chiTietDH__maDH__3E52440B">
+      <End Role="donHang" EntitySet="donHangs" />
+      <End Role="chiTietDH" EntitySet="chiTietDHs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__chiTietDH__maSP__3F466844" Association="LuxuryWatchesModel.FK__chiTietDH__maSP__3F466844">
+      <End Role="sanPham" EntitySet="sanPhams" />
+      <End Role="chiTietDH" EntitySet="chiTietDHs" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <EntitySet Name="khachHangs" EntityType="LuxuryWatchesModel.khachHang" />
+    <AssociationSet Name="khachHangdonHang" Association="LuxuryWatchesModel.khachHangdonHang">
+      <End Role="khachHang" EntitySet="khachHangs" />
+      <End Role="donHang" EntitySet="donHangs" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="hopThu">
+    <Key>
+      <PropertyRef Name="hopThuID" />
+    </Key>
+    <Property Name="hopThuID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="hoTen" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="sdt" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="noiDung" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ngayGui" Type="DateTime" Precision="3" />
+    <Property Name="daDuyet" Type="Boolean" Nullable="false" />
+    <Property Name="tkDuyet" Type="String" MaxLength="68" FixedLength="false" Unicode="false" />
+    <Property Name="ghiChu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="taiKhoan" Relationship="LuxuryWatchesModel.FK_hopThu_taiKhoan" FromRole="hopThu" ToRole="taiKhoan" />
+  </EntityType>
+  <EntityType Name="baiViet">
+    <Key>
+      <PropertyRef Name="maBV" />
+    </Key>
+    <Property Name="maBV" Type="Int32" Nullable="false" />
+    <Property Name="tenBV" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="ngayDang" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="tkThanhVien" Type="String" Nullable="false" MaxLength="68" FixedLength="false" Unicode="false" />
+    <Property Name="ndTomTat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="hinhDD" Type="String" MaxLength="270" FixedLength="false" Unicode="false" />
+    <Property Name="noiDungBV" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="daDuyet" Type="Boolean" Nullable="false" />
+    <Property Name="soLanDoc" Type="Int32" />
+    <Property Name="biDanh" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="taiKhoan" Relationship="LuxuryWatchesModel.FK__baiViet__tkThanh__1BFD2C07" FromRole="baiViet" ToRole="taiKhoan" />
+  </EntityType>
+  <EntityType Name="taiKhoan">
+    <Key>
+      <PropertyRef Name="tkThanhVien" />
+    </Key>
+    <Property Name="tkThanhVien" Type="String" Nullable="false" MaxLength="68" FixedLength="false" Unicode="false" />
+    <Property Name="matKhau" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="ngayCap" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="hoTV" Type="String" MaxLength="36" FixedLength="false" Unicode="true" />
+    <Property Name="tenTV" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="gioiTinh" Type="Boolean" Nullable="false" />
+    <Property Name="hinhAnh" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="ngaySinh" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="noiSinh" Type="String" MaxLength="36" FixedLength="false" Unicode="true" />
+    <Property Name="soDT" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="eMail" Type="String" MaxLength="95" FixedLength="false" Unicode="false" />
+    <Property Name="dcLienLac" Type="String" MaxLength="168" FixedLength="false" Unicode="true" />
+    <Property Name="duocSD" Type="Boolean" Nullable="false" />
+    <Property Name="ghiChu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="baiViets" Relationship="LuxuryWatchesModel.FK__baiViet__tkThanh__1BFD2C07" FromRole="taiKhoan" ToRole="baiViet" />
+    <NavigationProperty Name="hopThus" Relationship="LuxuryWatchesModel.FK_hopThu_taiKhoan" FromRole="taiKhoan" ToRole="hopThu" />
+    <NavigationProperty Name="sanPhams" Relationship="LuxuryWatchesModel.FK__sanPham__tkThanh__29572725" FromRole="taiKhoan" ToRole="sanPham" />
+    <Property Name="Quyen" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK__baiViet__tkThanh__1BFD2C07">
+    <End Type="LuxuryWatchesModel.taiKhoan" Role="taiKhoan" Multiplicity="1" />
+    <End Type="LuxuryWatchesModel.baiViet" Role="baiViet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="taiKhoan">
+        <PropertyRef Name="tkThanhVien" />
+      </Principal>
+      <Dependent Role="baiViet">
+        <PropertyRef Name="tkThanhVien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_hopThu_taiKhoan">
+    <End Type="LuxuryWatchesModel.taiKhoan" Role="taiKhoan" Multiplicity="0..1" />
+    <End Type="LuxuryWatchesModel.hopThu" Role="hopThu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="taiKhoan">
+        <PropertyRef Name="tkThanhVien" />
+      </Principal>
+      <Dependent Role="hopThu">
+        <PropertyRef Name="tkDuyet" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="sanPham">
+    <Key>
+      <PropertyRef Name="maSP" />
+    </Key>
+    <Property Name="maSP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="maLoai" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="maHangSX" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="tenSP" Type="String" Nullable="false" MaxLength="468" FixedLength="false" Unicode="true" />
+    <Property Name="ndTomTat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="tkThanhVien" Type="String" Nullable="false" MaxLength="68" FixedLength="false" Unicode="false" />
+    <Property Name="giaBan" Type="Int32" Nullable="false" />
+    <Property Name="daGiamGia" Type="Int32" />
+    <Property Name="soLuong" Type="Int32" Nullable="false" />
+    <Property Name="biDanh" Type="String" Nullable="false" MaxLength="468" FixedLength="false" Unicode="false" />
+    <Property Name="hinhDaiDien" Type="String" MaxLength="550" FixedLength="false" Unicode="false" />
+    <Property Name="soHinhKem" Type="Int32" Nullable="false" />
+    <Property Name="ndSanPham" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mauSac" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="kichCo" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="danhGia" Type="Int32" />
+    <Property Name="soLanQT" Type="Int32" Nullable="false" />
+    <Property Name="soLanGD" Type="Int32" Nullable="false" />
+    <Property Name="ngayDangSP" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="taiKhoan" Relationship="LuxuryWatchesModel.FK__sanPham__tkThanh__29572725" FromRole="sanPham" ToRole="taiKhoan" />
+    <NavigationProperty Name="HangSanXuat" Relationship="LuxuryWatchesModel.FK_sanPham_HangSanXuat" FromRole="sanPham" ToRole="HangSanXuat" />
+    <NavigationProperty Name="loaiSP" Relationship="LuxuryWatchesModel.FK__sanPham__maLoai__267ABA7A" FromRole="sanPham" ToRole="loaiSP" />
+    <NavigationProperty Name="chiTietDHs" Relationship="LuxuryWatchesModel.FK__chiTietDH__maSP__3F466844" FromRole="sanPham" ToRole="chiTietDH" />
+  </EntityType>
+  <Association Name="FK__sanPham__tkThanh__29572725">
+    <End Type="LuxuryWatchesModel.taiKhoan" Role="taiKhoan" Multiplicity="1" />
+    <End Type="LuxuryWatchesModel.sanPham" Role="sanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="taiKhoan">
+        <PropertyRef Name="tkThanhVien" />
+      </Principal>
+      <Dependent Role="sanPham">
+        <PropertyRef Name="tkThanhVien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="HangSanXuat">
+    <Key>
+      <PropertyRef Name="maHangSX" />
+    </Key>
+    <Property Name="maHangSX" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="tenHangSX" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="sanPhams" Relationship="LuxuryWatchesModel.FK_sanPham_HangSanXuat" FromRole="HangSanXuat" ToRole="sanPham" />
+  </EntityType>
+  <EntityType Name="loaiSP">
+    <Key>
+      <PropertyRef Name="maLoai" />
+    </Key>
+    <Property Name="maLoai" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="tenLoai" Type="String" Nullable="false" MaxLength="168" FixedLength="false" Unicode="true" />
+    <Property Name="biDanh" Type="String" Nullable="false" MaxLength="168" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="sanPhams" Relationship="LuxuryWatchesModel.FK__sanPham__maLoai__267ABA7A" FromRole="loaiSP" ToRole="sanPham" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_sanPham_HangSanXuat">
+    <End Type="LuxuryWatchesModel.HangSanXuat" Role="HangSanXuat" Multiplicity="1" />
+    <End Type="LuxuryWatchesModel.sanPham" Role="sanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HangSanXuat">
+        <PropertyRef Name="maHangSX" />
+      </Principal>
+      <Dependent Role="sanPham">
+        <PropertyRef Name="maHangSX" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__sanPham__maLoai__267ABA7A">
+    <End Type="LuxuryWatchesModel.loaiSP" Role="loaiSP" Multiplicity="1" />
+    <End Type="LuxuryWatchesModel.sanPham" Role="sanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="loaiSP">
+        <PropertyRef Name="maLoai" />
+      </Principal>
+      <Dependent Role="sanPham">
+        <PropertyRef Name="maLoai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="donHang">
+    <Key>
+      <PropertyRef Name="maDH" />
+    </Key>
+    <Property Name="maDH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="tenKH" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="soDT" Type="String" Nullable="false" MaxLength="88" FixedLength="false" Unicode="true" />
+    <Property Name="diaChi" Type="String" MaxLength="468" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="246" FixedLength="false" Unicode="true" />
+    <Property Name="tongSoLuong" Type="Int32" Nullable="false" />
+    <Property Name="tongThanhTien" Type="Int32" Nullable="false" />
+    <Property Name="tdDatHang" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="daGiaoHang" Type="Boolean" Nullable="false" />
+    <Property Name="tdGiaoHang" Type="DateTime" Precision="3" />
+    <Property Name="ghiChu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="chiTietDHs" Relationship="LuxuryWatchesModel.FK__chiTietDH__maDH__3E52440B" FromRole="donHang" ToRole="chiTietDH" />
+    <NavigationProperty Name="khachHang" Relationship="LuxuryWatchesModel.khachHangdonHang" FromRole="donHang" ToRole="khachHang" />
+  </EntityType>
+  <EntityType Name="chiTietDH">
+    <Key>
+      <PropertyRef Name="maDH" />
+      <PropertyRef Name="maSP" />
+      <PropertyRef Name="KichCo" />
+      <PropertyRef Name="MauSac" />
+    </Key>
+    <Property Name="maDH" Type="Int32" Nullable="false" />
+    <Property Name="maSP" Type="Int32" Nullable="false" />
+    <Property Name="KichCo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MauSac" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="soLuong" Type="Int32" Nullable="false" />
+    <Property Name="giaBan" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="donHang" Relationship="LuxuryWatchesModel.FK__chiTietDH__maDH__3E52440B" FromRole="chiTietDH" ToRole="donHang" />
+    <NavigationProperty Name="sanPham" Relationship="LuxuryWatchesModel.FK__chiTietDH__maSP__3F466844" FromRole="chiTietDH" ToRole="sanPham" />
+  </EntityType>
+  <Association Name="FK__chiTietDH__maDH__3E52440B">
+    <End Type="LuxuryWatchesModel.donHang" Role="donHang" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="LuxuryWatchesModel.chiTietDH" Role="chiTietDH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="donHang">
+        <PropertyRef Name="maDH" />
+      </Principal>
+      <Dependent Role="chiTietDH">
+        <PropertyRef Name="maDH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__chiTietDH__maSP__3F466844">
+    <End Type="LuxuryWatchesModel.sanPham" Role="sanPham" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="LuxuryWatchesModel.chiTietDH" Role="chiTietDH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sanPham">
+        <PropertyRef Name="maSP" />
+      </Principal>
+      <Dependent Role="chiTietDH">
+        <PropertyRef Name="maSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="khachHang">
+    <Key>
+      <PropertyRef Name="tkThanhVien" />
+    </Key>
+    <Property Name="tkThanhVien" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="eMail" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="soDT" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="matKhau" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="donHangs" Relationship="LuxuryWatchesModel.khachHangdonHang" FromRole="khachHang" ToRole="donHang" />
+  </EntityType>
+  <Association Name="khachHangdonHang">
+    <End Type="LuxuryWatchesModel.khachHang" Role="khachHang" Multiplicity="1" />
+    <End Type="LuxuryWatchesModel.donHang" Role="donHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="khachHang">
+        <PropertyRef Name="tkThanhVien" />
+      </Principal>
+      <Dependent Role="donHang">
+        <PropertyRef Name="tenKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
