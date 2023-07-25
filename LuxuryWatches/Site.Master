@@ -120,10 +120,10 @@
 				<div class="col-md-3 infor-left">
 					<h3>Thông tin cửa hàng</h3>
 					<h4>Cửa hàng Luxury Watches,
-						<span>25/2 KP5,</span>
-						đường Tô Ký, Quận 12, TPHCM.</h4>
-					<h5>+84 1636563921</h5>	
-					<p><a href="#">lehoangthienvu@gmail.com</a></p>
+						<span>475A Điện Biên Phủ,</span>
+						P.25, Q.Bình Thạnh, TP.HCM. </h4>
+					<h5>+84 772722361</h5>	
+					<p><a href="#">levietanhzz108@gmail.com</a></p>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -138,7 +138,7 @@
 						<p style="margin: 8px 0 0 0;font-size: 13px;color: #000;"><i class="glyphicon glyphicon-user"></i> Đang online: 5  <i class="glyphicon glyphicon-signal"></i> Tổng truy cập: 25360 lượt</p>			
 				</div>
 				<div class="col-md-6 footer-right">					
-					<p>© <%= DateTime.Now.Year %> Luxury Shop. All Rights Reserved | Design by  <a href="#" target="_blank">Lê Hoàng Thiên Vũ</a> </p>
+					<p>© <%= DateTime.Now.Year %> Luxury Shop. All Rights Reserved | Design by  <a href="#" target="_blank">Nhom 14</a> </p>
 				</div>
 				<div class="clearfix"></div>
 			</div>

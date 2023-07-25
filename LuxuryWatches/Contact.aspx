@@ -32,7 +32,7 @@
                     <div class="address">
                         <h5>Thông tin</h5>
                         <p>
-                            Tel:0838911361, 
+                            Tel:0772722361, 
                         <span>Fax:190-4509-494</span>
                             Email: <a href="#">luxuryshop@gmail.com</a>
                         </p>
