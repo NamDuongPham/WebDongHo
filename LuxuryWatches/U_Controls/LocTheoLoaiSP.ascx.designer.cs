@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LuxuryWatches.U_Controls {
+namespace LuxuryWatches.PageUser
     
     
     public partial class LoaiSP {

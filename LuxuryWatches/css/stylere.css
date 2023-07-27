@@ -29,6 +29,7 @@
     align-items: center;
     box-shadow: 0 25px 45px rgba(0,0,0,0.1);
     background: rgba(0,0,0, .7);
+   
 }
 
 .form {
@@ -49,14 +50,24 @@
         margin-left: 240px;
     }
    
-   .style {
-       width: 100%;
+.style {
+    width: 100%;
+    outlioutli
+    }
        
        outline: none;
        padding: 10px 15px;
    }
+
    .inputbox{
        margin: 10px;
+      
+      
+   }
+
+   #btnSignIn:hover{
+     cursor: pointer;
+     background: black;
    }
 
    .Btnsubmit {
@@ -80,6 +91,7 @@
         background: #73B6E1;
         font-family: 'Lato-Regular';
     }
+  #btnSignIn:hover, 
     #btnRegister2:hover {
         cursor: pointer;
         background: black;
